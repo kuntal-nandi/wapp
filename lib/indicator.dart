@@ -23,8 +23,10 @@ class _IndicatorPageState extends State<IndicatorPage> with TickerProviderStateM
   void initState() {
     controller = AnimationController(
       animationBehavior: AnimationBehavior.normal,
-      upperBound: 0.50,
+      upperBound: 0.60,
       vsync: this,
+
+
       duration: const Duration(seconds: 3),
     )..addListener(() {
       setState(() {});
