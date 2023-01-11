@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../Model/user_data_model.dart';
 import '../Repository/user_repo.dart';
+import '../Widget/user_card.dart';
 
 class UserPagination extends StatefulWidget {
   const UserPagination({Key? key}) : super(key: key);
@@ -43,7 +44,7 @@ class _UserPaginationState extends State<UserPagination> {
           }
         } else if (_controller.position.extentAfter ==
             _controller.position.maxScrollExtent) {
-
+          
         }
       });
     apiData();
@@ -74,12 +75,10 @@ class _UserPaginationState extends State<UserPagination> {
                     itemCount: allUsers.length,
                     controller: _controller,
                     itemBuilder: (BuildContext context, int index) {
-                      return Container(
-                        margin: const EdgeInsets.all(16),
-                        height: 100,
-                        width: 40,
-                        color: Colors.white,
-                        child: Text(allUsers[index].title!),
+                      return UserDetailsCard(
+                        id: allUsers[index].id!,
+                        body: allUsers[index].body!,
+                        title: allUsers[index].title!,
                       );
                     },
                   ),
