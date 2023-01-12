@@ -25,8 +25,6 @@ class _IndicatorPageState extends State<IndicatorPage> with TickerProviderStateM
       animationBehavior: AnimationBehavior.normal,
       upperBound: 0.50,
       vsync: this,
-
-
       duration: const Duration(seconds: 3),
     )..addListener(() {
       setState(() {});

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wapp/Lottie%20Animation/presentation/lottie_animation.dart';
 
 class NewGradient extends StatefulWidget {
   const NewGradient({Key? key}) : super(key: key);
@@ -30,6 +31,17 @@ class _NewGradientState extends State<NewGradient> {
                 const Color(0xff357EC7)
               ],
             )
+        ),
+        child: Column(
+          children: [
+            InkWell(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=> const LottieAnimationPage()),);
+              },
+              child: const Text("Lottie Animation",style: TextStyle(fontSize: 30,fontWeight: FontWeight.w700,
+                  color: Colors.white,decoration: TextDecoration.underline)),
+            ),
+          ],
         ),
       ),
     );
