@@ -50,9 +50,8 @@ class ReadNews extends StatelessWidget {
                       color: Colors.black),
                 ),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Container(),
+                    const Spacer(),
                      Padding(
                       padding: const EdgeInsets.only(top: 8.0),
                       child: Text(
@@ -68,10 +67,13 @@ class ReadNews extends StatelessWidget {
                 const SizedBox(
                   height: 10,
                 ),
-                imageUrl.isNotEmpty ? Image.network(imageUrl,
-                  width: double.infinity,
-                  height: 300,
-                  fit: BoxFit.fill,
+                imageUrl.isNotEmpty ? Hero(
+                  tag: imageUrl,
+                  child: Image.network(imageUrl,
+                    width: double.infinity,
+                    height: 300,
+                    fit: BoxFit.fill,
+                  ),
                 ) : const Icon(Icons.image,size: 400,color: Colors.grey,),
                 const SizedBox(
                   height: 10,

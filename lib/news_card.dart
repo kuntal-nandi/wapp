@@ -51,10 +51,13 @@ class NewsCard extends StatelessWidget {
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  imageUrl.isNotEmpty ? Image.network(imageUrl,
-                    width: 100,
-                    height: 100,
-                    fit: BoxFit.fill,
+                  imageUrl.isNotEmpty ? Hero(
+                    tag: imageUrl,
+                    child: Image.network(imageUrl,
+                      width: 100,
+                      height: 100,
+                      fit: BoxFit.fill,
+                    ),
                   ) : const Icon(Icons.image,size: 90,color: Colors.black,),
                   const SizedBox(
                     width: 8,
