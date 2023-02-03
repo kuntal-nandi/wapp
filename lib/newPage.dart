@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:wapp/Lottie%20Animation/presentation/lottie_animation.dart';
 
+import 'game/Presentation/tree_game.dart';
+
 class NewGradient extends StatefulWidget {
   const NewGradient({Key? key}) : super(key: key);
 
@@ -39,6 +41,13 @@ class _NewGradientState extends State<NewGradient> {
                 Navigator.push(context, MaterialPageRoute(builder: (context)=> const LottieAnimationPage()),);
               },
               child: const Text("Lottie Animation",style: TextStyle(fontSize: 30,fontWeight: FontWeight.w700,
+                  color: Colors.white,decoration: TextDecoration.underline)),
+            ),
+            InkWell(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=> const TreeGame()),);
+              },
+              child: const Text("Game Animation",style: TextStyle(fontSize: 30,fontWeight: FontWeight.w700,
                   color: Colors.white,decoration: TextDecoration.underline)),
             ),
           ],

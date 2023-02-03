@@ -6,6 +6,9 @@ import 'package:wapp/Music%20Player/Bloc/play_music_bloc.dart';
 import 'package:wapp/Quiz/data_center.dart';
 import 'package:wapp/home.dart';
 
+import 'game/Bloc/game_cubit.dart';
+import 'game/Data Provider/tree_game_data_provider.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -22,6 +25,12 @@ class MyApp extends StatelessWidget {
         providers: [
           BlocProvider<FilterDataCubit>(create: (context) => FilterDataCubit()),
           BlocProvider<PlayMusicBloc>(create: (context) => PlayMusicBloc()),
+          BlocProvider<GameCubit>(create: (context) => GameCubit(
+            totalTap: GameData.totalTap,
+            numbersToSelect: GameData.numbersToSelect,
+            lives: GameData.lives,
+            randomNumbers: GameData.randomNumbers,
+          )),
         ],
         child: const MaterialApp(
           debugShowCheckedModeBanner: false,
