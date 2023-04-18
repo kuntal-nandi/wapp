@@ -4,7 +4,9 @@ import 'package:wapp/Music%20Player/presentation/music_player_page.dart';
 import 'package:wapp/Quiz/presentation/quiz_page.dart';
 import 'package:wapp/custom_card.dart';
 import 'package:wapp/news_page.dart';
+import 'package:wapp/otp/otp_page.dart';
 import 'package:wapp/shoe_ui.dart';
+import 'package:wapp/voice/voice_to_speech.dart';
 
 import 'Calculator/presentation/calculator_page.dart';
 import 'Filter/presentation /filter_selection.dart';
@@ -266,6 +268,13 @@ class _IndicatorPageState extends State<IndicatorPage> with TickerProviderStateM
                 Navigator.push(context, MaterialPageRoute(builder: (context)=> const UserPagination()),);
               },
               child: const Text("Pagination",style: TextStyle(fontSize: 30,fontWeight: FontWeight.w700,
+                  color: Colors.black,decoration: TextDecoration.underline)),
+            ),
+            InkWell(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=> const OtpPage(fieldNo: 6,)),);
+              },
+              child: const Text("OTP Field",style: TextStyle(fontSize: 30,fontWeight: FontWeight.w700,
                   color: Colors.black,decoration: TextDecoration.underline)),
             ),
           ],

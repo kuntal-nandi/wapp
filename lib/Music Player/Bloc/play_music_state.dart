@@ -8,10 +8,10 @@ class PlayMusicInitial extends PlayMusicState {}
 class PlayMusicLoading extends PlayMusicState {}
 
 class PlayMusicLoaded extends PlayMusicState {
-  List<MusicModel> allMusic;
-  MusicModel selectedMusic;
-  int selectedMusicIndex;
-  List<PlaylistModel> playlists;
+  final List<MusicModel> allMusic;
+  final MusicModel selectedMusic;
+  final int selectedMusicIndex;
+  final List<PlaylistModel> playlists;
   PlayMusicLoaded(
       {required this.allMusic,
       required this.selectedMusic,

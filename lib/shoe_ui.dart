@@ -3,6 +3,7 @@ import 'package:wapp/animation_play.dart';
 import 'dart:ui' as ui;
 
 import 'package:wapp/newPage.dart';
+import 'package:wapp/voice/voice_to_speech.dart';
 
 class ShoeList extends StatelessWidget {
   ShoeList({Key? key}) : super(key: key);
@@ -171,6 +172,13 @@ class ShoeList extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 40,),
+            InkWell(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=> const VoiceAssistant()),);
+              },
+              child: const Text("voice assistant",style: TextStyle(fontSize: 30,fontWeight: FontWeight.w700,
+                  color: Colors.black,decoration: TextDecoration.underline)),
+            ),
             // CustomPaint(
             //   size: Size(200,(200*0.5833333333333334).toDouble()), //You can Replace [WIDTH] with your desired width for Custom Paint and height will be calculated automatically
             //   painter: SCustomPainter(),
@@ -195,25 +203,25 @@ class ShoeList extends StatelessWidget {
             //   ]
             // ),
 
-            Stack(
-              children: [
-                const Positioned(
-                  top: 92,
-                  left: 208,
-                  child: CircleAvatar(
-                    radius: 12,
-                    backgroundColor:Colors.black,
-                  ),
-                ),
-                Container(
-                  margin: const EdgeInsets.only(left: 70),
-                  child: CustomPaint(
-                  size: Size(_width,(_width*0.5833333333333334).toDouble()), //You can Replace [WIDTH] with your desired width for Custom Paint and height will be calculated automatically
-                  painter: BatMan(),
-
-              ),
-                ),]
-            ),
+            // Stack(
+            //   children: [
+            //     const Positioned(
+            //       top: 92,
+            //       left: 208,
+            //       child: CircleAvatar(
+            //         radius: 12,
+            //         backgroundColor:Colors.black,
+            //       ),
+            //     ),
+            //     Container(
+            //       margin: const EdgeInsets.only(left: 70),
+            //       child: CustomPaint(
+            //       size: Size(_width,(_width*0.5833333333333334).toDouble()), //You can Replace [WIDTH] with your desired width for Custom Paint and height will be calculated automatically
+            //       painter: BatMan(),
+            //
+            //   ),
+            //     ),]
+            // ),
           ],
         ),
       ),

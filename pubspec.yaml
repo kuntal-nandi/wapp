@@ -42,6 +42,9 @@ dependencies:
   flutter_bloc: ^8.1.1
   flutter_neumorphic: ^3.2.0
   lottie: ^2.2.0
+  speech_to_text:
+  avatar_glow: ^2.0.2
+  clipboard:
 
 dev_dependencies:
   flutter_test:
